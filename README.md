@@ -12,6 +12,7 @@ Dim client As New SoapClient
 Dim SmsType As String
 
 // Check balance example
+
 Private Sub checkBalanceBtn_Click()
 
     client.mssoapinit (http://api2.onnorokomsms.com/SendSms.asmx?wsdl)
@@ -23,6 +24,7 @@ Private Sub checkBalanceBtn_Click()
 End Sub
 
 // Bulk SMS Sending example
+
 Private Sub sendBulkSms_Click()
 Dim rsp As Variant
     rsp = client.OneToMany(userName.Text, password.Text, smsText.Text, mobileNumbers.Text, SmsType, maskNameTxt.Text, "")
@@ -30,6 +32,7 @@ Dim rsp As Variant
 End Sub
 
 /// Single SMS Sending example
+
 Private Sub sendSingleSms_Click()
     Dim rsp As Variant
     rsp = client.OneToOne(userName.Text, password.Text, mobileNumbers.Text, smsText.Text, SmsType, maskNameTxt.Text, "")
